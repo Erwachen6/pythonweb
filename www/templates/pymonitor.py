@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-__author__ = 'Michael Liao'
+__author__ = 'Erwachen6'
 
 import os, sys, time, subprocess
 
@@ -11,10 +11,10 @@ from watchdog.events import FileSystemEventHandler
 def log(s):
     print('[Monitor] %s' % s)
 
-class MyFileSystemEventHander(FileSystemEventHandler):
+class MyFile(FileSystemEventHandler):
 
     def __init__(self, fn):
-        super(MyFileSystemEventHander, self).__init__()
+        super(MyFile, self).__init__()
         self.restart = fn
 
     def on_any_event(self, event):
